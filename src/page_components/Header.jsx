@@ -12,7 +12,6 @@ export default function Header() {
                 <NavLink to={"/blog_posts"}>Blog Posts</NavLink>
                 <NavLink to={"/about_us"}>About Us</NavLink>
             </div>
-
         </header>
     );
 }
