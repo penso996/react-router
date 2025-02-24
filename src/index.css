@@ -13,9 +13,21 @@
 header {
   background-color: rgba(248, 249, 250, 255);
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 header h1 {
+  font-size: 50px;
   padding: 20px;
+}
+
+header div {
+  margin-bottom: 10px;
+}
+
+header a {
+  padding: 40px;
+  text-decoration: none;
+  color: black;
 }
