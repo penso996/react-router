@@ -1,5 +1,7 @@
 // AboutUs.jsx
 
+
+// RENDER
 export default function AboutUs() {
     return (
         <main>

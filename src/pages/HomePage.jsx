@@ -1,5 +1,7 @@
 // HomePage.jsx
 
+
+// RENDER
 export default function HomePage() {
     return (
         <main>

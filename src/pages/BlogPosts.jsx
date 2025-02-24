@@ -1,6 +1,8 @@
 // BlogPosts.jsx
 
+// Import useState from React
 import { useState, useEffect } from "react";
+// Import axios
 import axios from "axios";
 
 export default function BlogPosts() {
@@ -8,7 +10,7 @@ export default function BlogPosts() {
     // useState to handle blogPosts
     const [blogPostsData, setBlogPostsData] = useState([]);
 
-    // FUNCTION to handle API request
+    // FUNCTION with axios to handle API request
     function fetchBlogPost() {
         axios.get("http://localhost:3000/posts")
             .then((res) => setBlogPostsData(res.data))
@@ -18,7 +20,7 @@ export default function BlogPosts() {
     useEffect(fetchBlogPost, []);
 
 
-    // RENDER PAGE
+    // RENDER
     return (
         <main>
             {/* Blog Posts List*/}
