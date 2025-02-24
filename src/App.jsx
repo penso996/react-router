@@ -1,3 +1,4 @@
+// Import routing fuction from React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Import default layout
