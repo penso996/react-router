@@ -45,8 +45,22 @@ header a.active::after {
 }
 
 /* PAGES CSS */
+/* <main> RULES */
+main {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 /* HomePage.jsx */
 
 /* BlogPosts.jsx */
+.post-container {
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
 
 /* AboutUs.jsx */
