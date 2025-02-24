@@ -5,6 +5,8 @@ import DefaultLayout from "./layouts/DefaultLayout";
 
 // Import pages
 import HomePage from "./pages/HomePage";
+import BlogPosts from "./pages/BlogPosts";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
 
@@ -13,6 +15,8 @@ function App() {
       <Routes>
         <Route element={<DefaultLayout />} >
           <Route path="/" element={<HomePage />} />
+          <Route path="/blog_posts" element={<BlogPosts />} />
+          <Route path="/about_us" element={<AboutUs />} />
         </Route>
       </Routes>
     </BrowserRouter >
