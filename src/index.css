@@ -9,6 +9,7 @@
   box-sizing: border-box;
 }
 
+/* PAGES COMPONENTS CSS */
 /* HEADER (Header.jsx) */
 header {
   background-color: rgba(248, 249, 250, 255);
@@ -42,3 +43,5 @@ header a.active::after {
   height: 4px;
   background-color: blue;
 }
+
+/* PAGES CSS */
