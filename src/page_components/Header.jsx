@@ -3,6 +3,8 @@
 // Import Navlink functions from React
 import { Link, NavLink } from "react-router-dom";
 
+
+// RENDER
 export default function Header() {
     return (
         <header>

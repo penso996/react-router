@@ -3,9 +3,11 @@
 // Importa Outlet function from React
 import { Outlet } from "react-router-dom";
 
-// Import components
+// Import page components
 import Header from "./../page_components/Header";
 
+
+// RENDER
 export default function DefaultLayout() {
     return (
         <>
