@@ -3,7 +3,7 @@
 export default function Header() {
     return (
         <header>
-            <h1>Blog</h1>
+            <h1>BLOG</h1>
         </header>
     );
 }

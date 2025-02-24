@@ -8,3 +8,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* HEADER (Header.jsx) */
+header {
+  background-color: rgba(248, 249, 250, 255);
+  display: flex;
+  justify-content: center;
+}
+
+header h1 {
+  padding: 20px;
+}
