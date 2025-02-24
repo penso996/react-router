@@ -1,6 +1,6 @@
 // Header.jsx
 
-// Import Navlink functions
+// Import Navlink functions from React
 import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
