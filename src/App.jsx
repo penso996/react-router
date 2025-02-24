@@ -1,11 +1,21 @@
-import Header from "./page_components/Header"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Import default layout
+import DefaultLayout from "./layouts/DefaultLayout";
+
+// Import pages
+import HomePage from "./pages/HomePage";
 
 function App() {
 
   return (
-    <>
-      <Header />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<DefaultLayout />} >
+          <Route path="/" element={<HomePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter >
   )
 }
 
