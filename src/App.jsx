@@ -8,6 +8,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import BlogPosts from "./pages/BlogPosts";
 import PostDetailPage from "./pages/PostDetailPage";
+import AddPost from "./pages/AddPost";
 import AboutUs from "./pages/AboutUs";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/blog_posts">
             <Route index element={<BlogPosts />} />
             <Route path=":id" element={<PostDetailPage />} />
+            <Route path="add_post" element={<AddPost />} />
           </Route>
           <Route path="/about_us" element={<AboutUs />} />
           {/* NotFoundPage */}
