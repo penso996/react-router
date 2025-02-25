@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import BlogPosts from "./pages/BlogPosts";
 import AboutUs from "./pages/AboutUs";
 import PostDetailPage from "./pages/PostDetailPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route element={<DefaultLayout />} >
           <Route path="/" element={<HomePage />} />
+
           <Route path="/blog_posts">
             <Route index element={<BlogPosts />} />
             <Route path=":id" element={<PostDetailPage />} />
@@ -25,6 +27,8 @@ function App() {
           </Route>
 
           <Route path="/about_us" element={<AboutUs />} />
+
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter >
