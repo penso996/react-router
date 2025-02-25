@@ -25,6 +25,11 @@ export default function PostDetailPage() {
 
     useEffect(() => fetchPost(), [id])
 
+    // CONST to handle button behaviour (stop only if no previous post, no behaviaour defined if there is no next post)
+    const currentId = parseInt(id);
+    const previousId = currentId - 1;
+    const nextId = currentId + 1;
+
 
     // RENDER
     return (
@@ -36,10 +41,11 @@ export default function PostDetailPage() {
                 <img src={post.image} alt={post.title} />
                 <p>{post.tags?.length === 1 ? post.tags[0] : post.tags?.join(", ")}</p>
                 {/* Buttons to Prev/Next post */}
-                <Link to={`/blog_posts/${parseInt(id) - 1}`}>
-                    <button>Precedente</button>
-                </Link>
-                <Link to={`/blog_posts/${parseInt(id) + 1}`}>
+                {previousId === 0 ? (<button>Nessun Post Precedente</button>) : (
+                    <Link to={`/blog_posts/${previousId}`}>
+                        <button>Precedente</button>
+                    </Link>)}
+                <Link to={`/blog_posts/${nextId}`}>
                     <button>Successivo</button>
                 </Link>
             </div>
