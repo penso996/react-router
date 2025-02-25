@@ -1,5 +1,5 @@
 // Import routing fuction from React
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Import default layout
 import DefaultLayout from "./layouts/DefaultLayout";
@@ -17,16 +17,14 @@ function App() {
       <Routes>
         <Route element={<DefaultLayout />} >
           <Route path="/" element={<HomePage />} />
-          <Route path="/blog_posts" element={<BlogPosts />} />
-          <Route path="/about_us" element={<AboutUs />} />
-          <Route path="/posts">
-            <Route index element={<PostDetailPage />} />
+          <Route path="/blog_posts">
+            <Route index element={<BlogPosts />} />
+            <Route path=":id" element={<PostDetailPage />} />
 
-            {/* <Route path="create" element={<PizzasCreatePage />} />
-            <Route path=":id" element={<PizzasDetailPage />} /> */}
-
+            {/* <Route path="create" element={<PizzasCreatePage />} */}
           </Route>
 
+          <Route path="/about_us" element={<AboutUs />} />
         </Route>
       </Routes>
     </BrowserRouter >
