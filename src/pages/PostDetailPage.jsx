@@ -4,6 +4,8 @@
 import { useState, useEffect } from 'react';
 // Import useParams for routing
 import { useParams } from "react-router-dom";
+// Import link function to Next/Prev post
+import { Link } from "react-router-dom";
 // Import axios
 import axios from 'axios';
 
@@ -33,9 +35,14 @@ export default function PostDetailPage() {
                 <p>{post.content}</p>
                 <img src={post.image} alt={post.title} />
                 <p>{post.tags?.length === 1 ? post.tags[0] : post.tags?.join(", ")}</p>
-                <button>ok</button>
-                <button>ok</button>
+                {/* Buttons to Prev/Next post */}
+                <Link to={`/blog_posts/${parseInt(id) - 1}`}>
+                    <button>Precedente</button>
+                </Link>
+                <Link to={`/blog_posts/${parseInt(id) + 1}`}>
+                    <button>Successivo</button>
+                </Link>
             </div>
-        </main>
+        </main >
     );
 }
