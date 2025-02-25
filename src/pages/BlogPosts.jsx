@@ -38,6 +38,10 @@ export default function BlogPosts() {
     // RENDER
     return (
         <main>
+            {/* button for adding post */}
+            <Link to={"/blog_posts/add_post"}>
+                <button>Crea un post</button>
+            </Link>
             {/* Blog Posts List*/}
             {blogPostsData.length === 0 ? (<div><h3>No posts to show</h3></div>) : (
                 blogPostsData.map((post) => (
@@ -57,6 +61,7 @@ export default function BlogPosts() {
                     </div>
                 ))
             )}
+
         </main>
     );
 }
