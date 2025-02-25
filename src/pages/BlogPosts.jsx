@@ -21,6 +21,19 @@ export default function BlogPosts() {
     // useEffect to fetch data once
     useEffect(fetchBlogPost, []);
 
+    // FUNCTION to delete post in BE
+    function deletePost(postId) {
+        // delete post by filtering
+        const updatedBlogPostsData = blogPostsData.filter((post) => {
+            return post.id !== postId;
+        });
+
+        // delete from BE
+        axios.delete(`http://localhost:3000/posts/${postId}`)
+            .then(res => setBlogPostsData(updatedBlogPostsData))
+            .catch(err => console.log(err));
+    }
+
 
     // RENDER
     return (
@@ -33,9 +46,14 @@ export default function BlogPosts() {
                         <p>{post.content}</p>
                         <img src={post.image} alt={post.title} />
                         <p>{post.tags.length === 1 ? post.tags[0] : post.tags.join(", ")}</p>
+                        {/* buttons for details and delete */}
                         <Link to={`/blog_posts/${post.id}`}>
                             <button>Vai al dettaglio</button>
                         </Link>
+                        <button onClick={() => deletePost(post.id)}>
+                            Cancella
+                        </button>
+
                     </div>
                 ))
             )}
