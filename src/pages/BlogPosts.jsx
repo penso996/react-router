@@ -2,6 +2,8 @@
 
 // Import useState from React
 import { useState, useEffect } from "react";
+// Import link function to get single post data
+import { Link } from "react-router-dom";
 // Import axios
 import axios from "axios";
 
@@ -31,6 +33,9 @@ export default function BlogPosts() {
                         <p>{post.content}</p>
                         <img src={post.image} alt={post.title} />
                         <p>{post.tags.length === 1 ? post.tags[0] : post.tags.join(", ")}</p>
+                        <Link to={`/blog_posts/${post.id}`}>
+                            <button>Vai al dettaglio</button>
+                        </Link>
                     </div>
                 ))
             )}
