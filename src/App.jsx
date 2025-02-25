@@ -22,8 +22,6 @@ function App() {
           <Route path="/blog_posts">
             <Route index element={<BlogPosts />} />
             <Route path=":id" element={<PostDetailPage />} />
-
-            {/* <Route path="create" element={<PizzasCreatePage />} */}
           </Route>
           <Route path="/about_us" element={<AboutUs />} />
           {/* NotFoundPage */}
