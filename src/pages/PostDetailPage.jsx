@@ -33,6 +33,8 @@ export default function PostDetailPage() {
                 <p>{post.content}</p>
                 <img src={post.image} alt={post.title} />
                 <p>{post.tags?.length === 1 ? post.tags[0] : post.tags?.join(", ")}</p>
+                <button>ok</button>
+                <button>ok</button>
             </div>
         </main>
     );
