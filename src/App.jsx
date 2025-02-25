@@ -8,6 +8,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import BlogPosts from "./pages/BlogPosts";
 import AboutUs from "./pages/AboutUs";
+import PostDetailPage from "./pages/PostDetailPage";
 
 function App() {
 
@@ -18,6 +19,14 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/blog_posts" element={<BlogPosts />} />
           <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/posts">
+            <Route index element={<PostDetailPage />} />
+
+            {/* <Route path="create" element={<PizzasCreatePage />} />
+            <Route path=":id" element={<PizzasDetailPage />} /> */}
+
+          </Route>
+
         </Route>
       </Routes>
     </BrowserRouter >
